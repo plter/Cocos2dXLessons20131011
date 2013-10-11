@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>16A08B98-2BFA-4338-956C-A0C0977ED420</string>
+	<string>C58B25AD-CCA1-4B78-9F64-C6E62F0A363B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>HelloC</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>BAE668DD-CCA3-4655-9C3E-D63906E56D0E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Cocos2dXLessons20131011</string>
+			<string>HelloC</string>
 		</dict>
 	</array>
 </dict>

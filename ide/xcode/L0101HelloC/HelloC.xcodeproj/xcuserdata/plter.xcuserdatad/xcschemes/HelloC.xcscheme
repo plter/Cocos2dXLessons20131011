@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "316DE43B18079C2400420A00"
+               BlueprintIdentifier = "316DE45018079C4C00420A00"
                BuildableName = "HelloC"
                BlueprintName = "HelloC"
                ReferencedContainer = "container:HelloC.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "316DE43B18079C2400420A00"
+            BlueprintIdentifier = "316DE45018079C4C00420A00"
             BuildableName = "HelloC"
             BlueprintName = "HelloC"
             ReferencedContainer = "container:HelloC.xcodeproj">
@@ -51,7 +51,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "316DE43B18079C2400420A00"
+            BlueprintIdentifier = "316DE45018079C4C00420A00"
             BuildableName = "HelloC"
             BlueprintName = "HelloC"
             ReferencedContainer = "container:HelloC.xcodeproj">
@@ -69,7 +69,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "316DE43B18079C2400420A00"
+            BlueprintIdentifier = "316DE45018079C4C00420A00"
             BuildableName = "HelloC"
             BlueprintName = "HelloC"
             ReferencedContainer = "container:HelloC.xcodeproj">
