@@ -16,7 +16,6 @@ typedef struct{
     char * answerC;
     char * answerD;
     char right;
-    
 } Question;
 
 
@@ -25,7 +24,6 @@ int main(int argc, const char * argv[])
     int score = 0;
     int qsCount = 10;
     int index = 0;
-    char userInputAnswer;
     
     Question* qs[qsCount];
     for (index=0; index<qsCount; index++) {
@@ -49,12 +47,11 @@ int main(int argc, const char * argv[])
         q = qs[index];
         printf("%d. %s\n%s\n%s\n%s\n%s\n",index+1,q->question,q->answerA,q->answerB,q->answerC,q->answerD);
         
-        scanf("%c",&userInputAnswer);
-        getchar();
-        
-        if (userInputAnswer==q->right) {
+        if (getchar()==q->right) {
             score+=10;
         }
+        
+        getchar();
     }
     
     printf("总分：%d\n",score);
