@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define QUESTIONS_COUNT 10
+
 typedef struct{
     char * question;
     char * answerA;
@@ -18,23 +20,25 @@ typedef struct{
     char right;
 } Question;
 
-
-int main(int argc, const char * argv[])
-{
-    int score = 0;
-    int qsCount = 10;
-    int index = 0;
-    
-    Question* qs[qsCount];
-    for (index=0; index<qsCount; index++) {
-        qs[index] = malloc(sizeof(Question));
+Question** createQuestions(){
+    Question** qs = malloc(sizeof(Question*)*QUESTIONS_COUNT);
+    for (int i=0; i < QUESTIONS_COUNT; i++) {
+        qs[i] = malloc(sizeof(Question));
     }
-    
-    //init questions
+    return qs;
+}
+
+void deleteQuestions(Question** qs){
+    for (int i=0; i<QUESTIONS_COUNT; i++) {
+        free(qs[i]);
+    }
+    free(qs);
+}
+
+void initQuestions(Question** qs){
     Question* q;
-    
-    for (index = 0; index<qsCount; index++) {
-        q = qs[index];
+    for (int i = 0; i<QUESTIONS_COUNT; i++) {
+        q = qs[i];
         q->right = 'a';
         q->question = "哪个数字更大？";
         q->answerA = "a:9";
@@ -43,9 +47,21 @@ int main(int argc, const char * argv[])
         q->answerD = "d:8";
     }
     
-    for (index = 0; index<qsCount; index++) {
-        q = qs[index];
-        printf("%d. %s\n%s\n%s\n%s\n%s\n",index+1,q->question,q->answerA,q->answerB,q->answerC,q->answerD);
+    //TODO Your can provide anthor implementation
+}
+
+int main(int argc, const char * argv[])
+{
+    int score = 0;
+    
+    Question* q;
+    Question** qs = createQuestions();
+    initQuestions(qs);
+    
+    //check user input
+    for (int i = 0; i<QUESTIONS_COUNT; i++) {
+        q = qs[i];
+        printf("%d. %s\n%s\n%s\n%s\n%s\n",i+1,q->question,q->answerA,q->answerB,q->answerC,q->answerD);
         
         if (getchar()==q->right) {
             score+=10;
@@ -55,6 +71,8 @@ int main(int argc, const char * argv[])
     }
     
     printf("总分：%d\n",score);
+    
+    deleteQuestions(qs);
     return 0;
 }
 
