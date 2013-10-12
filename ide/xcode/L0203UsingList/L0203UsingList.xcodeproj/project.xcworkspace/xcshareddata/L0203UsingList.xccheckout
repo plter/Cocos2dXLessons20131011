@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8F001614-FB39-4EFA-99D2-CEE08A27B113</string>
+	<key>IDESourceControlProjectName</key>
+	<string>L0203UsingList</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>20EB6ACD-38B8-4EFF-8BA3-B9525C4B6846</key>
+		<string>https://github.com/plter/Cocos2dXLessons20131011.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ide/xcode/L0203UsingList/L0203UsingList.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>20EB6ACD-38B8-4EFF-8BA3-B9525C4B6846</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/plter/Cocos2dXLessons20131011.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>20EB6ACD-38B8-4EFF-8BA3-B9525C4B6846</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>20EB6ACD-38B8-4EFF-8BA3-B9525C4B6846</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cocos2dXLessons20131011</string>
+		</dict>
+	</array>
+</dict>
+</plist>
