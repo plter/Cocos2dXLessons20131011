@@ -34,21 +34,12 @@ PLArray* createPLArray(){
 }
 
 void destoryPLArray(PLArray* arr){
-    //    PLArrayItem* cur=arr->end->pre;
-    //    PLArrayItem* tmp;
-    //    while (cur!=NULL) {
-    //        tmp = cur->pre;
-    //        if (tmp!=NULL) {
-    //            tmp->next=NULL;
-    //        }
-    //        destoryPLArrayItem(cur);
-    //        cur=tmp;
-    //    }
     
     while (arr->length>0) {
         PLArrayPop(arr);
     }
     
+    destoryPLArrayItem(arr->end);
     free(arr);
 }
 
