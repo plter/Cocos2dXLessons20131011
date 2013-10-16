@@ -27,21 +27,12 @@ bool HelloWorld::init()
         return false;
     }
     
-    
-//    CCSprite* s = CCSprite::create();
-//    s->setTextureRect(CCRect(0, 0, 100, 100));
-//    s->setColor(ccc3(255, 0, 0));
-//    s->setAnchorPoint(ccp(0, 0));
-//    addChild(s);
-    
-    
     CCSize size = CCDirector::sharedDirector()->getVisibleSize();
     
-    label = CCLabelTTF::create();
-    label->setString("Click me");
-    label->setFontSize(100);
-    label->setPosition(ccp(size.width/2, size.height/2));
-    addChild(label);
+    tf = CCTextFieldTTF::textFieldWithPlaceHolder("Input Here", "Courier", 48);
+    tf->setPosition(ccp(size.width/2, size.height));
+    tf->setAnchorPoint(ccp(0.5, 1));
+    addChild(tf);
     
     setTouchEnabled(true);
     
@@ -50,11 +41,10 @@ bool HelloWorld::init()
 
 
 void HelloWorld::ccTouchesBegan(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent){
-    
-    CCTouch* t = (CCTouch*)pTouches->anyObject();
-    
-    if (label->boundingBox().containsPoint(t->getLocation())) {
-        CCLog("Label Clicked");
+    if (tf->boundingBox().containsPoint(((CCTouch*)pTouches->anyObject())->getLocation())) {
+        tf->attachWithIME();
+    }else{
+        tf->detachWithIME();
     }
 }
 

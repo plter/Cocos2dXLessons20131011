@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BuildJni" default="BuildNumJni">
+    <target name="BuildNumJni">
+        <exec executable="javah" dir="./bin/classes/">
+        	<arg value="-d"/>
+        	<arg value="../../jni"/>
+        	<arg value="-jni"/>
+        	<arg value="cn.eoe.callc.Num"/>
+        </exec>
+    </target>
+</project>
