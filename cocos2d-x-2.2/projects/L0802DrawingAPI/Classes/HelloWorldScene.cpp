@@ -27,13 +27,30 @@ bool HelloWorld::init()
         return false;
     }
     
-    CCSize size = CCDirector::sharedDirector()->getVisibleSize();
+    speedX = 0;
+    speedY = 0;
     
-    CCSprite* s = CCSprite::create("img.jpg", CCRect(0, 0, 200, 200));
-    s->setPosition(ccp(size.width/2, size.height/2));
-    addChild(s);
+    
+    CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
+    
+    circle = Circle::create();
+    circle->setPosition(ccp(200, 200));
+    addChild(circle);
+    
+    setAccelerometerEnabled(true);
+    scheduleUpdate();
     
     return true;
+}
+
+void HelloWorld::didAccelerate(cocos2d::CCAcceleration *pAccelerationValue){
+    speedX+=pAccelerationValue->x;
+    speedY+=pAccelerationValue->y;
+}
+
+void HelloWorld::update(float dt){
+    circle->setPositionX(circle->getPositionX()+speedX);
+    circle->setPositionY(circle->getPositionY()+speedY);
 }
 
 
