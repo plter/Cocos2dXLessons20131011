@@ -29,8 +29,7 @@ bool HelloWorld::init()
     
     rectArr = new CCArray();
     
-    
-    b2Vec2 vec(0,-0);
+    b2Vec2 vec(0,-10);
     world = new b2World(vec);
     world->SetAllowSleeping(true);
     world->SetContinuousPhysics(true);
@@ -64,37 +63,64 @@ void HelloWorld::addRect(float px, float py){
     addChild(rect);
     
     b2BodyDef bodyDef;
+    bodyDef.linearDamping = 1;
     bodyDef.position.x = px/RATIO;
     bodyDef.position.y = py/RATIO;
-    bodyDef.linearVelocity = b2Vec2(0,-1);
+    bodyDef.angularDamping = 0.8;
+//    bodyDef.linearVelocity = b2Vec2(0,-1);
+//    bodyDef.angularVelocity = M_PI;
     bodyDef.type = b2_dynamicBody;
     b2Body * body = world->CreateBody(&bodyDef);
+    body->SetUserData(rect);
     
     b2PolygonShape bodyShape;
     bodyShape.SetAsBox(20.0f/RATIO, 20.0f/RATIO);
     
     b2FixtureDef bodyFd;
-    bodyFd.density = 1;
+    bodyFd.density = 0.3;
     bodyFd.friction = 0.3;
     bodyFd.shape = &bodyShape;
-    bodyFd.restitution = 0.5;
+//    bodyFd.restitution = 0.5;
     body->CreateFixture(&bodyFd);
     
-    rect->setB2Body(body);
+//    rect->setB2Body(body);
     
-    rectArr->addObject(rect);
+//    rectArr->addObject(rect);
     
 }
 
 void HelloWorld::update(float dt){
     world->Step(dt, 8, 3);
     
-    CCObject *obj;
-    Rect *rect;
-    CCARRAY_FOREACH(rectArr, obj){
-        rect = (Rect*)obj;
-        rect->syncStatus();
+    CCSprite *r;
+    for (b2Body *b = world->GetBodyList(); b!=NULL; b=b->GetNext()) {
+        r = (Rect*)(b->GetUserData());
+        if (r!=NULL) {
+            
+            if (b->GetPosition().y<=3) {
+                
+                b->ApplyForceToCenter(b2Vec2(0, 10*1*0.5*0.5*(
+                                                                3-b->GetPosition().y>0.5?1:3-b->GetPosition().y/0.5
+                                             )
+                                             )
+                                      );
+            }
+            
+            r->setPositionX(b->GetPosition().x*80);
+            r->setPositionY(b->GetPosition().y*80);
+            r->setRotation(-b->GetAngle()*180/M_PI);
+            
+        }
+//        CCLog("%f",b->GetPosition().x);
+//        CCLog("%f",b->GetPosition().y);
     }
+    
+//    CCObject *obj;
+//    Rect *rect;
+//    CCARRAY_FOREACH(rectArr, obj){
+//        rect = (Rect*)obj;
+//        rect->syncStatus();
+//    }
 }
 
 
