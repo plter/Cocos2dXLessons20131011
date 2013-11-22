@@ -36,7 +36,7 @@ function Game()
 		layer:addChild(resetGameLabel)
 
 		resetGame()
-		startGame(currentLevel)
+		startGame(1)
 	end
 	
 	function resetGame()
@@ -77,8 +77,8 @@ function Game()
 
 		allPoints = {}
 
-		for i=0, 9 do
-			for j=0, 5 do
+		for i=0, Config.MAX_H_NUM-1 do
+			for j=0, Config.MAX_V_NUM-1 do
 				table.insert(allPoints,1,ccp(Config.CARD_WIDTH*i,Config.CARD_HEIGHT*j))
 			end
 		end

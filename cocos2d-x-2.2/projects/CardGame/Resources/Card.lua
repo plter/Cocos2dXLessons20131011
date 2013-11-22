@@ -5,7 +5,7 @@ function Card(num)
 	---
 	--@type Card
 	local self = CCSprite:create()
-	local recto = CCLabelTTF:create(num,"Courier",50)
+	local recto = CCLabelTTF:create(num,"Courier",55)
 	local verso = CCSprite:create()
 	
 	
