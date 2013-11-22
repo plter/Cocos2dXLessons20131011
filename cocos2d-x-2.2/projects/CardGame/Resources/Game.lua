@@ -27,11 +27,11 @@ function Game()
 		layer:setTouchEnabled(true)
 		self.scene:addChild(layer)
 		
-		nextLevelLabel = CCLabelTTF:create("Success\nClick for next level","Courier",60)
+		nextLevelLabel = CCLabelTTF:create("Success\nClick for next level","Courier",Config.LABEL_FONT_SIZE)
 		nextLevelLabel:setPosition(ccp(visibleSize.width/2,visibleSize.height/2))
 		layer:addChild(nextLevelLabel)
 		
-		resetGameLabel = CCLabelTTF:create("Fail\nClick for reset game","Courier",60)
+		resetGameLabel = CCLabelTTF:create("Fail\nClick for reset game","Courier",Config.LABEL_FONT_SIZE)
 		resetGameLabel:setPosition(ccp(visibleSize.width/2,visibleSize.height/2))
 		layer:addChild(resetGameLabel)
 

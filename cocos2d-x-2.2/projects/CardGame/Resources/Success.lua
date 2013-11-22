@@ -15,7 +15,7 @@ function Success()
 	mn:setPosition(ccp(visibleSize.width/2,visibleSize.height/2))
 	layer:addChild(mn)
 	
-	local successLabel = CCLabelTTF:create("You succeed\nClick here to restart","Courier","50")
+	local successLabel = CCLabelTTF:create("You succeed\nClick here to restart","Courier",Config.LABEL_FONT_SIZE)
 	successLabel:setPosition(ccp(visibleSize.width/2,visibleSize.height/2))
 	layer:addChild(successLabel)
 	
