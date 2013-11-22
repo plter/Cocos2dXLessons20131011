@@ -31,7 +31,7 @@ function Game()
 		nextLevelLabel:setPosition(ccp(visibleSize.width/2,visibleSize.height/2))
 		layer:addChild(nextLevelLabel)
 		
-		resetGameLabel = CCLabelTTF:create("Fail\nClick for reset game","Courier",Config.LABEL_FONT_SIZE)
+		resetGameLabel = CCLabelTTF:create("Fail\nClick to reset game","Courier",Config.LABEL_FONT_SIZE)
 		resetGameLabel:setPosition(ccp(visibleSize.width/2,visibleSize.height/2))
 		layer:addChild(resetGameLabel)
 

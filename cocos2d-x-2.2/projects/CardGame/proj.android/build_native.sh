@@ -1,4 +1,5 @@
 APPNAME="CardGame"
+NDK_ROOT="/Applications/adt/android-ndk-r8e"
 
 # options
 
