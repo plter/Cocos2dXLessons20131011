@@ -1,0 +1,6 @@
+Config={}
+Config.CARD_WIDTH = 80
+Config.CARD_HEIGHT= 80
+Config.VISIBLE_WIDTH = 800
+Config.VISIBLE_HEIGHT= 480
+Config.MAX_LEVEL = 50
