@@ -1,6 +1,6 @@
 #Cocos2d-x 6周课程
 
-[讲师博客：blog.plter.com](http://blog.plter.com)
+[讲师博客：plter.com/b](http://plter.com/b)
 ---
 ##1. C语言
 ###知识点
